@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Use an environment variable or default to localhost for development
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
+
 function App() {
   const [items, setItems] = useState([]);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/items')
+    axios.get(`${API_BASE_URL}/items`)
       .then(response => setItems(response.data))
       .catch(error => console.error('Error fetching items:', error));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/items/add', { name, description })
+    axios.post(`${API_BASE_URL}/items/add`, { name, description })
       .then(() => {
         setName('');
         setDescription('');
-        return axios.get('http://localhost:5000/items');
+        return axios.get(`${API_BASE_URL}/items`);
       })
       .then(response => setItems(response.data))
       .catch(error => console.error('Error adding item:', error));
