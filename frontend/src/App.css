@@ -1,7 +1,7 @@
 /* App.css */
 .container {
   padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   font-family: Arial, sans-serif;
 }
@@ -39,13 +39,44 @@
   background-color: #0056b3;
 }
 
-.list {
-  list-style-type: none;
-  padding: 0;
+.table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
-.list-item {
+.table th, .table td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
 }
