@@ -1,0 +1,45 @@
+# Node.js
+# Ignore node_modules folder
+node_modules/
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore environment variable files
+.env
+
+# Ignore built files and directories (for both frontend and backend)
+frontend/build
+backend/build
+
+# Ignore temporary and system files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Ignore IDE and editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore MacOS system files
+._*
+.Spotlight-V100
+.Trashes
+
+# Ignore any coverage results
+coverage/
+
+# Ignore generated files
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore typescript build outputs
+dist/
